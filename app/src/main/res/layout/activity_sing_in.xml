@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:background="@color/FFFCF4"
 
+
     >
 
     <TextView
@@ -39,9 +40,9 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginTop="100dp"
-        android:hint="Email address"
+        android:hint=" Email address"
+        android:drawableLeft="@drawable/iconemail"/>
 
-        />
 
     <EditText
         android:layout_width="match_parent"
@@ -49,12 +50,11 @@
         android:layout_marginRight="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:hint="Password address"
+        android:hint=" Password address"
+        android:drawableLeft="@drawable/iconpassword"/>
 
-        />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+    <TextView
+        android:id="@+id/tvforgotpassword"
         android:layout_width="123dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
@@ -63,16 +63,20 @@
         android:ems="10"
         android:text="Forgot password"
         android:textSize="15dp"
+
         />
 
     <Button
-        android:layout_marginTop="50dp"
+        android:id="@+id/btnNext"
         android:layout_width="65dp"
         android:layout_height="60dp"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="50dp"
-        android:background="@drawable/btn_next" />
-
+        android:background="@drawable/iconnext"
+        android:drawableStart="@drawable/search"
+    android:layout_gravity="right|bottom"
+        />
 
 
 </LinearLayout>
