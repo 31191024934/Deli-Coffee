@@ -90,8 +90,8 @@
                 android:id="@+id/textView"
                 android:layout_width="281dp"
                 android:layout_height="43dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
                 android:text="Peppermint Mocha"
                 android:textColor="@color/black"
                 android:textSize="27dp"
@@ -101,12 +101,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="44dp"
+                android:layout_marginTop="40dp"
 
                 android:text="50.000"
                 android:textSize="25dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.567"
+                app:layout_constraintHorizontal_bias="0.448"
                 app:layout_constraintStart_toEndOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@+id/button" />
 
@@ -114,7 +114,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="334dp"
                 android:layout_height="111dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="20dp"
                 android:text="A holiday classic, our Peppermint Mocha infuses hand-pulled espresso with rich chocolate sauce, sweet peppermint, topped with a cloud of whipped cream."
                 android:textSize="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
