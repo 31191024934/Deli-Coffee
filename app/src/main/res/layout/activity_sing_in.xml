@@ -41,7 +41,8 @@
         android:layout_marginRight="50dp"
         android:layout_marginTop="100dp"
         android:hint=" Email address"
-        android:drawableLeft="@drawable/iconemail"/>
+        android:drawableLeft="@drawable/iconemail"
+        android:inputType="textEmailAddress"/>
 
 
     <EditText
@@ -51,7 +52,8 @@
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:hint=" Password address"
-        android:drawableLeft="@drawable/iconpassword"/>
+        android:drawableLeft="@drawable/iconpassword"
+        android:inputType="textPassword"/>
 
     <TextView
         android:id="@+id/tvforgotpassword"
@@ -63,6 +65,7 @@
         android:ems="10"
         android:text="Forgot password"
         android:textSize="15dp"
+
 
         />
 

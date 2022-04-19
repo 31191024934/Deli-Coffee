@@ -41,14 +41,18 @@
         android:textSize="20dp"
 
         />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
         android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:drawableLeft="@drawable/iconaccount"
         android:hint=" Create an account here"
-        android:drawableLeft="@drawable/iconaccount"/>
+        android:inputType="text"
+        />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -56,6 +60,7 @@
         android:layout_marginRight="50dp"
         android:layout_marginTop="30dp"
         android:hint=" Mobile Number"
+        android:inputType="phone"
         android:drawableLeft="@drawable/iconnumber"/>
 
 
@@ -63,12 +68,11 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
         android:layout_marginTop="30dp"
+        android:layout_marginRight="50dp"
+        android:drawableLeft="@drawable/iconemail"
         android:hint=" Email address"
-        android:drawableLeft="@drawable/iconemail"/>
-
-
+        android:inputType="textEmailAddress"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -76,11 +80,13 @@
         android:layout_marginRight="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
+
         android:hint=" Password"
-        android:drawableLeft="@drawable/iconpassword"/>
+        android:drawableLeft="@drawable/iconpassword"
+        android:inputType="textPassword"/>
 
 
-    />
+
 
     <TextView
         android:id="@+id/editTextTextPersonName"

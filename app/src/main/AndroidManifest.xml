@@ -10,14 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".Home"
             android:exported="false" />
         <activity
             android:name=".Product_Detail"
             android:exported="false" />
         <activity
-            android:name=".Cover"
-            android:exported="false" />
+            android:name=".SignUp"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="project.edu.example.delicoffee.SingIn" />
+        </activity>
         <activity
             android:name=".Search_result"
             android:exported="false" />
@@ -25,7 +32,7 @@
             android:name=".Search_empty"
             android:exported="false" />
         <activity
-            android:name=".SignUp"
+            android:name=".Cover"
             android:exported="false" />
         <activity
             android:name=".SingIn"
