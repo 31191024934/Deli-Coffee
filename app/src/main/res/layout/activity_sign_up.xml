@@ -43,17 +43,19 @@
         />
 
     <EditText
+        android:id="@+id/signup_name"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
         android:layout_marginRight="50dp"
         android:drawableLeft="@drawable/iconaccount"
-        android:hint=" Create an account here"
+        android:hint="User Name"
         android:inputType="text"
         />
 
     <EditText
+        android:id="@+id/signup_edtphone"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="50dp"
@@ -65,6 +67,7 @@
 
 
     <EditText
+        android:id="@+id/signup_edtemail"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="50dp"
@@ -75,6 +78,7 @@
         android:inputType="textEmailAddress"/>
 
     <EditText
+        android:id="@+id/signup_edtpassword"
         android:layout_width="match_parent"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
@@ -102,7 +106,7 @@
         android:textSize="15dp" />
 
     <Button
-        android:id="@+id/btnNext"
+        android:id="@+id/signup_btnsignup"
         android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:layout_gravity="right|bottom"

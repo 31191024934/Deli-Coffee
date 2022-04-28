@@ -4,20 +4,29 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/DeliCoffee/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2545" />
+        <entry key="..\:/DeliCoffee/app/src/main/res/drawable/botron_btn.xml" value="0.29" />
         <entry key="..\:/DeliCoffee/app/src/main/res/drawable/btn_next.xml" value="0.326" />
         <entry key="..\:/DeliCoffee/app/src/main/res/drawable/circle_black.xml" value="0.2505" />
         <entry key="..\:/DeliCoffee/app/src/main/res/drawable/circle_brown.xml" value="0.332" />
         <entry key="..\:/DeliCoffee/app/src/main/res/drawable/fameproduct.xml" value="0.2545" />
         <entry key="..\:/DeliCoffee/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2545" />
         <entry key="..\:/DeliCoffee/app/src/main/res/drawable/search.xml" value="0.326" />
+        <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_checkout.xml" value="0.1" />
         <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_cover.xml" value="0.3292572463768116" />
-        <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_home.xml" value="0.3625" />
+        <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_product_detail.xml" value="0.36666666666666664" />
+        <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_profile.xml" value="0.33" />
+        <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_profile_s.xml" value="0.33" />
         <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_search_empty.xml" value="0.3292572463768116" />
         <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_search_result.xml" value="0.3292572463768116" />
         <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_sign_up.xml" value="0.3292572463768116" />
-        <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_sing_in.xml" value="0.3292572463768116" />
+        <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_sing_in.xml" value="0.25" />
+        <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_test.xml" value="0.3625" />
+        <entry key="..\:/DeliCoffee/app/src/main/res/layout/activity_your_orders.xml" value="0.3625" />
+        <entry key="..\:/DeliCoffee/app/src/main/res/layout/content_test.xml" value="0.3625" />
+        <entry key="..\:/DeliCoffee/app/src/main/res/layout/fragment_first.xml" value="0.3625" />
+        <entry key="..\:/DeliCoffee/app/src/main/res/layout/fragment_second.xml" value="0.3625" />
       </map>
     </option>
   </component>

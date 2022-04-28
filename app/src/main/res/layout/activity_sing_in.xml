@@ -34,18 +34,21 @@
 
         />
 
+
     <EditText
+        android:id="@+id/singIn_edt_email"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
         android:layout_marginTop="100dp"
-        android:hint=" Email address"
+        android:layout_marginRight="50dp"
         android:drawableLeft="@drawable/iconemail"
-        android:inputType="textEmailAddress"/>
-
+        android:hint=" Email address"
+        android:maxLength="64"
+        android:inputType="textEmailAddress" />
 
     <EditText
+        android:id="@+id/singIn_edt_password"
         android:layout_width="match_parent"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
@@ -53,24 +56,61 @@
         android:layout_marginTop="20dp"
         android:hint=" Password address"
         android:drawableLeft="@drawable/iconpassword"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:maxLength="20"/>
 
-    <TextView
-        android:id="@+id/tvforgotpassword"
-        android:layout_width="123dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:text="Forgot password"
-        android:textSize="15dp"
+        android:orientation="horizontal"
+            >
+
+        <LinearLayout
+            android:id="@+id/signin_forgot_password"
+            android:layout_width="229dp"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/singIn_tvforgotpassword"
+                android:layout_width="151dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:ems="10"
+                android:text="Forgot password ?"
+                android:textSize="15dp"
+
+                />
+
+            <View
+                android:layout_width="109dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="50dp"
+                android:background="@color/A905C52" />
+
+        </LinearLayout>
 
 
-        />
 
+        <TextView
+            android:id="@+id/singIn_singup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:text="Sing Up"
+            android:textSize="17dp"
+
+            />
+
+    </LinearLayout>
     <Button
-        android:id="@+id/btnNext"
+        android:id="@+id/signIn_btn_Next"
         android:layout_width="65dp"
         android:layout_height="60dp"
         android:layout_marginLeft="50dp"

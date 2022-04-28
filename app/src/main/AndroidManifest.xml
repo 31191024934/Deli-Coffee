@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="project.edu.example.delicoffee">
+    package="project.edu.example.delicoffee" >
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
+        <activity
+            android:name=".VerifyPhoneNumber"
+            android:exported="false" />
+        <activity
+            android:name=".Enter_Otp"
+            android:exported="false" />
+        <activity
+            android:name=".Forgot_Password"
+            android:exported="false" /> <!-- +++++++++++++++++++++++++++ -->
+        <activity
+            android:name=".Home"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- ++++++++++++++++++++++++++++++ -->
         <activity
             android:name=".Checkout"
             android:exported="false" />
@@ -19,17 +37,14 @@
             android:name=".Your_Orders"
             android:exported="false" />
         <activity
-            android:name=".Profile"
-            android:exported="false" />
-        <activity
-            android:name=".Home"
+            android:name=".SingIn"
             android:exported="false" />
         <activity
             android:name=".Product_Detail"
             android:exported="false" />
         <activity
             android:name=".SignUp"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="project.edu.example.delicoffee.SingIn" />
@@ -43,16 +58,6 @@
         <activity
             android:name=".Cover"
             android:exported="false" />
-<!--        +++++++++++++++++++++++++++-->
-        <activity
-            android:name=".SingIn"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
