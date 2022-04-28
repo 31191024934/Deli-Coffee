@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity
+            android:name=".Checkout"
+            android:exported="false" />
+        <activity
+            android:name=".Profile_S"
+            android:exported="false" />
+        <activity
+            android:name=".Your_Orders"
+            android:exported="false" />
+        <activity
             android:name=".Profile"
             android:exported="false" />
         <activity
@@ -34,6 +43,7 @@
         <activity
             android:name=".Cover"
             android:exported="false" />
+<!--        +++++++++++++++++++++++++++-->
         <activity
             android:name=".SingIn"
             android:exported="true">

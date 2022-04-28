@@ -85,7 +85,7 @@ android:background="@color/FFFCF4"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="105dp"
+                    android:layout_width="109dp"
                     android:layout_height="match_parent"
 
                     android:gravity="left|center"
@@ -141,7 +141,7 @@ android:background="@color/FFFCF4"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="105dp"
+                    android:layout_width="109dp"
                     android:layout_height="match_parent"
 
                     android:gravity="left|center"
@@ -197,7 +197,7 @@ android:background="@color/FFFCF4"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="105dp"
+                    android:layout_width="109dp"
                     android:layout_height="match_parent"
 
                     android:gravity="left|center"
@@ -254,7 +254,7 @@ android:background="@color/FFFCF4"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="105dp"
+                    android:layout_width="109dp"
                     android:layout_height="match_parent"
 
                     android:gravity="left|center"

@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class SingIn extends AppCompatActivity {
 Button btnnext;
 TextView tvforgotpassword;
@@ -16,7 +19,8 @@ TextView tvforgotpassword;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sing_in);
 
-init();
+        init();
+
     }
     protected  void init()
     {
@@ -30,4 +34,13 @@ init();
             }
         });
     }
+    private void themdl()
+    {
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("user/message");
+
+        myRef.setValue("Hello, World!");
+
+    }
+
 }
