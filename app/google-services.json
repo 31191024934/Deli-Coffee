@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "340525975919",
+    "project_id": "deli-coffee",
+    "storage_bucket": "deli-coffee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340525975919:android:bc4bd654c55abfb249c09a",
+        "android_client_info": {
+          "package_name": "project.edu.example.delicoffee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "340525975919-b9n1n99thendtkv90qcq8113j8cjgmrb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoJN3RLSCgFvFZW3SZn9QSUI9ebpCu4SQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "340525975919-b9n1n99thendtkv90qcq8113j8cjgmrb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
