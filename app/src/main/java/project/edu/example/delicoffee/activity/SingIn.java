@@ -1,4 +1,4 @@
-package project.edu.example.delicoffee;
+package project.edu.example.delicoffee.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,8 +17,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+
+import project.edu.example.delicoffee.R;
 
 public class SingIn extends AppCompatActivity {
    private Button btnnext;
@@ -90,7 +90,7 @@ ProgressDialog progressDialog ;
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
                         if (task.isSuccessful()) { // login thanh cong
-                          Intent intent = new Intent(SingIn.this,Home.class);
+                          Intent intent = new Intent(SingIn.this, Home.class);
                           startActivity(intent);
                         } else {
                             // logon that bại
@@ -104,13 +104,13 @@ ProgressDialog progressDialog ;
 
     private   void onClickForGotPassWord()
     {
-      Intent intent = new Intent (SingIn.this,Forgot_Password.class);
+      Intent intent = new Intent (SingIn.this, Forgot_Password.class);
       startActivity(intent);
 
     }
     private void onClickSignUp()
     {
-        Intent intent = new Intent(getApplicationContext(),SignUp.class);
+        Intent intent = new Intent(getApplicationContext(), SignUp.class);
         startActivity(intent);
     }
 

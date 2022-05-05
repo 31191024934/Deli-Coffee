@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile_S"
+    tools:context=".activity.Profile_S"
     android:orientation="vertical"
     android:layout_marginLeft="30dp"
     android:layout_marginRight="30dp">
@@ -16,6 +16,7 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/profile_img_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/iconprevious"
@@ -64,6 +65,7 @@
                     android:layout_height="wrap_content"
                     android:text="Name"/>
                 <EditText
+
                     android:id="@+id/profile_edt_name"
                     android:layout_width="match_parent"
                     android:layout_height="38dp"
@@ -72,11 +74,13 @@
                     android:textStyle="bold"
                     android:textColor="#222222" />
             </LinearLayout>
+
             <ImageButton
+                android:id="@+id/profile_img_editname"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/icon_edit"
-                android:layout_gravity="center_vertical"/>
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_edit" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -108,15 +112,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Phone number"/>
+
                 <EditText
+                    android:id="@+id/profile_edt_phone"
                     android:layout_width="match_parent"
                     android:layout_height="38dp"
 
+                    android:textColor="#222222"
                     android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:textColor="#222222" />
+                    android:textStyle="bold" />
             </LinearLayout>
             <ImageButton
+                android:id="@+id/profile_img_editphone"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/icon_edit"
@@ -162,7 +169,7 @@
                     android:textColor="#222222" />
             </LinearLayout>
             <ImageButton
-             android:id="@+id/profile_imgbtn_edit"
+                android:id="@+id/profile_img_editemail"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/icon_edit"
@@ -198,14 +205,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Address"/>
+
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="38dp"
+                    android:textColor="#222222"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    android:textColor="#222222" />
+                    android:hint="Please enter yours address"/>
             </LinearLayout>
             <ImageButton
+                android:id="@+id/profile_img_editaddress"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/icon_edit"
@@ -227,6 +237,7 @@
             android:background="@drawable/img_qrcode" />
 
         <Button
+            android:id="@+id/profile_btn_save"
             android:layout_width="204dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

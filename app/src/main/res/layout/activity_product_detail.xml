@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Product_Detail"
+    tools:context=".activity.Product_Detail"
     android:orientation="vertical">
 
     <LinearLayout
@@ -16,10 +16,11 @@
         android:layout_y="0dp">
 
         <Button
-            android:layout_marginTop="10dp"
+            android:id="@+id/btnBack"
             android:layout_width="40dp"
             android:layout_height="36dp"
-            android:background="@drawable/iconprevious"/>
+            android:layout_marginTop="10dp"
+            android:background="@drawable/iconprevious" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -40,12 +41,12 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnMinus"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:background="@drawable/circle_black"
-                android:text="+"
+                android:text="-"
                 android:textColor="@color/white"
 
                 android:textSize="30dp"
@@ -57,14 +58,14 @@
                 app:layout_constraintVertical_bias="0.071" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnPlus"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:background="@drawable/circle_black"
-                android:text="-"
+                android:text="+"
                 android:textColor="@color/white"
-                android:textSize="30dp"
+                android:textSize="25dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.657"
@@ -73,21 +74,21 @@
                 app:layout_constraintVertical_bias="0.071" />
 
             <TextView
+                android:id="@+id/txtQuantity"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-
-                android:text="0"
+                android:text="1"
                 android:textAlignment="center"
                 android:textSize="27dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/button"
-                app:layout_constraintStart_toEndOf="@+id/button2"
+                app:layout_constraintEnd_toStartOf="@+id/btnPlus"
+                app:layout_constraintStart_toEndOf="@+id/btnMinus"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.071" />
 
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txtName"
                 android:layout_width="281dp"
                 android:layout_height="43dp"
                 android:layout_marginStart="24dp"
@@ -96,9 +97,10 @@
                 android:textColor="@color/black"
                 android:textSize="25dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button2" />
+                app:layout_constraintTop_toBottomOf="@+id/btnMinus" />
 
             <TextView
+                android:id="@+id/txtPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -107,11 +109,11 @@
                 android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.448"
-                app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/button" />
+                app:layout_constraintStart_toEndOf="@+id/txtName"
+                app:layout_constraintTop_toBottomOf="@+id/btnMinus" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/txtDescription"
                 android:layout_width="334dp"
                 android:layout_height="111dp"
                 android:layout_marginTop="20dp"
@@ -120,9 +122,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.493"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
             <Button
+                android:id="@+id/btnAddCart"
                 android:layout_width="262dp"
                 android:layout_height="60dp"
                 android:layout_marginBottom="24dp"

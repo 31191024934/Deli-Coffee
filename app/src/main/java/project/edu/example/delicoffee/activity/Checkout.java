@@ -1,8 +1,10 @@
-package project.edu.example.delicoffee;
+package project.edu.example.delicoffee.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import project.edu.example.delicoffee.R;
 
 public class Checkout extends AppCompatActivity {
 

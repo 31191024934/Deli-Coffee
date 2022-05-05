@@ -1,14 +1,16 @@
-package project.edu.example.delicoffee;
+package project.edu.example.delicoffee.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Product_Detail extends AppCompatActivity {
+import project.edu.example.delicoffee.R;
+
+public class Your_Orders extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_detail);
+        setContentView(R.layout.activity_your_orders);
     }
 }

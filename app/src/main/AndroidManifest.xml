@@ -10,16 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
         <activity
-            android:name=".VerifyPhoneNumber"
-            android:exported="false" />
-        <activity
-            android:name=".Enter_Otp"
-            android:exported="false" />
-        <activity
-            android:name=".Forgot_Password"
+            android:name=".activity.Forgot_Password"
             android:exported="false" /> <!-- +++++++++++++++++++++++++++ -->
         <activity
-            android:name=".Home"
+            android:name=".activity.Home"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,35 +22,35 @@
             </intent-filter>
         </activity> <!-- ++++++++++++++++++++++++++++++ -->
         <activity
-            android:name=".Checkout"
+            android:name=".activity.Checkout"
             android:exported="false" />
         <activity
-            android:name=".Profile_S"
+            android:name=".activity.Profile_S"
             android:exported="false" />
         <activity
-            android:name=".Your_Orders"
+            android:name=".activity.Your_Orders"
             android:exported="false" />
         <activity
-            android:name=".SingIn"
+            android:name=".activity.SingIn"
             android:exported="false" />
         <activity
-            android:name=".Product_Detail"
+            android:name=".activity.Product_Detail"
             android:exported="false" />
         <activity
-            android:name=".SignUp"
+            android:name=".activity.SignUp"
             android:exported="false" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="project.edu.example.delicoffee.SingIn" />
+                android:value="project.edu.example.delicoffee.activity.SingIn" />
         </activity>
         <activity
-            android:name=".Search_result"
+            android:name=".activity.Search_result"
             android:exported="false" />
         <activity
-            android:name=".Search_empty"
+            android:name=".activity.Search_empty"
             android:exported="false" />
         <activity
-            android:name=".Cover"
+            android:name=".activity.Cover"
             android:exported="false" />
     </application>
 

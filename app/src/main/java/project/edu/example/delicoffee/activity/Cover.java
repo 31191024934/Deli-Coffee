@@ -1,4 +1,4 @@
-package project.edu.example.delicoffee;
+package project.edu.example.delicoffee.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import project.edu.example.delicoffee.R;
 
 public class Cover extends AppCompatActivity {
 ImageView imgCover;
@@ -20,7 +22,7 @@ ImageView imgCover;
         imgCover.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent  intent = new Intent(getApplicationContext(),SingIn.class);
+                Intent  intent = new Intent(getApplicationContext(), SingIn.class);
                 startActivity(intent);
 
             }

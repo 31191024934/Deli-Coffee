@@ -1,4 +1,4 @@
-package project.edu.example.delicoffee;
+package project.edu.example.delicoffee.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +15,8 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+
+import project.edu.example.delicoffee.R;
 
 public class Forgot_Password extends AppCompatActivity {
          private    EditText edt_email;
@@ -39,7 +41,7 @@ public class Forgot_Password extends AppCompatActivity {
     { img_previous.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent (Forgot_Password.this,SingIn.class);
+            Intent intent = new Intent (Forgot_Password.this, SingIn.class);
             startActivity(intent);
         }
     });
