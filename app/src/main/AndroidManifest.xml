@@ -13,7 +13,7 @@
             android:name=".activity.Forgot_Password"
             android:exported="false" /> <!-- +++++++++++++++++++++++++++ -->
         <activity
-            android:name=".activity.Search_result"
+            android:name=".activity.Cover"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,7 +50,7 @@
             android:name=".activity.SearchEmpty"
             android:exported="false" />
         <activity
-            android:name=".activity.Cover"
+            android:name=".activity.Search_result"
             android:exported="false" />
     </application>
 

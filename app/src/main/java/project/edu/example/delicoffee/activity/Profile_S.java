@@ -31,7 +31,7 @@ import project.edu.example.delicoffee.R;
 import project.edu.example.delicoffee.model.Users;
 
 public class Profile_S extends AppCompatActivity {
-         private    EditText edt_email,edt_name,edt_phone;
+         private    EditText edt_email,edt_name,edt_phone,edt_address;
        private      TextView edt_signout ;
      private ImageButton img_editemai,img_editphone,img_editname,img_editaddress;
          private    Button btn_save;
@@ -59,6 +59,7 @@ public class Profile_S extends AppCompatActivity {
         edt_phone=findViewById(R.id.profile_edt_phone);
         btn_save=findViewById(R.id.profile_btn_save);
         img_back=findViewById(R.id.profile_img_back);
+        edt_address= findViewById(R.id.profile_edt_address);
     }
     private void initListenerr() {
 
@@ -159,6 +160,7 @@ public class Profile_S extends AppCompatActivity {
             edt_name.setText(user.username);
             edt_email.setText(user.email);
             edt_phone.setText(user.sdt);
+            edt_address.setText(user.address);
 
         }
 
@@ -168,31 +170,13 @@ public class Profile_S extends AppCompatActivity {
         }
     });
 
-//        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-//     DatabaseReference databaseReference=firebaseDatabase.getReference("Users");
-//     databaseReference.addValueEventListener(new ValueEventListener() {
-//         @Override
-//         public void onDataChange(@NonNull DataSnapshot snapshot) {
-//             for(DataSnapshot dataSnapshot : snapshot.getChildren()) snapshot la một mảng
-//             {
-//                 Users users = dataSnapshot.getValue(Users.class);
-//                 edt_name.setText(users.username);
-//             }
-//             String strname= snapshot.getValue(String.class);
-//
-//         }
-//
-//         @Override
-//         public void onCancelled(@NonNull DatabaseError error) {
-//
-//         }
-//     });
 
     }
     private void onClickEditInfomation() {
         String strphone = edt_phone.getText().toString().trim();
         String stremail = edt_email.getText().toString().trim();
         String strname= edt_name.getText().toString().trim();
+        String straddress= edt_address.getText().toString().trim();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -205,10 +189,12 @@ public class Profile_S extends AppCompatActivity {
                 edt_name.setText(user.username);
                 edt_email.setText(user.email);
                 edt_phone.setText(user.sdt);
+                edt_address.setText(user.address);
                 Users updateUser=new Users();
                 updateUser.setEmail(stremail);
                 updateUser.setUsername(strname);
                 updateUser.setSdt(strphone);
+                updateUser.setAddress(straddress);
                 databaseReference.setValue(updateUser);
 
             }

@@ -8,9 +8,7 @@
 
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".activity.Checkout"
@@ -20,16 +18,16 @@
 
 
         <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="32dp"
-            android:layout_height="20dp"
+            android:id="@+id/checkout_back"
+            android:layout_width="38dp"
+            android:layout_height="33dp"
             android:outlineAmbientShadowColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.014"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.073"
+            app:layout_constraintVertical_bias="0.065"
             app:srcCompat="@drawable/iconprevious" />
 
         <TextView
@@ -43,7 +41,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.429"
-            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintStart_toEndOf="@+id/checkout_back"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.059" />
 
@@ -150,12 +148,13 @@
             app:layout_constraintTop_toBottomOf="@+id/editText"
             app:layout_constraintVertical_bias="0.023" />
 
-        <TextView
-            android:id="@+id/textView10"
+
+        <TextClock
+            android:id="@+id/textclock"
+            android:format24Hour="E, d-M-yyyy k:m:sa"
+            android:format12Hour="k:m:sa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10/04/2022, 04:20"
-            android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -166,15 +165,17 @@
 
         <ImageView
             android:id="@+id/imageButton"
-            android:layout_width="39dp"
-            android:layout_height="38dp"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView12"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
-            app:layout_constraintVertical_bias="0.223"
-            app:srcCompat="@drawable/momo" />
+            app:layout_constraintVertical_bias="0.23"
+            app:srcCompat="@drawable/icon_xe" />
+
+
 
         <RadioButton
             android:id="@+id/radioButton"
@@ -217,14 +218,14 @@
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Momo"
+            android:text="Payment On Delivery"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/radioButton2"
-            app:layout_constraintHorizontal_bias="0.239"
+            app:layout_constraintHorizontal_bias="0.348"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11"
-            app:layout_constraintVertical_bias="0.091" />
+            app:layout_constraintVertical_bias="0.089" />
 
         <RadioButton
             android:id="@+id/radioButton2"
@@ -232,20 +233,20 @@
             android:layout_height="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.996"
+            app:layout_constraintHorizontal_bias="0.989"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioButton"
-            app:layout_constraintVertical_bias="0.086" />
+            app:layout_constraintVertical_bias="0.068" />
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:text="Sub total"
+            android:text="Address"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView16"
+            app:layout_constraintEnd_toStartOf="@+id/checkout_back"
             app:layout_constraintHorizontal_bias="0.02"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButton"
@@ -268,6 +269,7 @@
             android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="192dp"
             android:text="25.000"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -275,19 +277,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.988"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView16"
-            app:layout_constraintVertical_bias="0.07" />
+            app:layout_constraintTop_toBottomOf="@+id/checkout_sum"
+            app:layout_constraintVertical_bias="0.576" />
 
         <EditText
+            android:id="@+id/editText3"
             android:layout_width="280dp"
             android:layout_height="5dp"
             tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/checkout_sum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="225.000"
+android:text="50"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -306,14 +309,15 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView18"
+            app:layout_constraintEnd_toStartOf="@+id/checkout_back"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText2"
             app:layout_constraintVertical_bias="0.119" />
 
         <TextView
-            android:id="@+id/textView18"
+
+            android:id="@+id/checkout_sum2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="250.000"
@@ -345,10 +349,5 @@
 
 
 
-
-    momo.png
-
-
-    creditcard.png
 
 </androidx.constraintlayout.widget.ConstraintLayout>

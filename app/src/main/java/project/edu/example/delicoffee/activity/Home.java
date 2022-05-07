@@ -24,22 +24,25 @@ import java.util.List;
 
 import project.edu.example.delicoffee.R;
 import project.edu.example.delicoffee.adapter.ProductAdapter;
+import project.edu.example.delicoffee.model.Cart;
 import project.edu.example.delicoffee.model.Product;
 
 public class Home extends AppCompatActivity {
 List<Product> products;
 ProductAdapter productAdapter;
 RecyclerView rvcHomeProduct;
+ImageView imgSearch,imgCarts;
+public static ArrayList<Cart> listcart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        rvcHomeProduct=findViewById(R.id.rvcHomeProduct);
+        initUi();
+        initListenrt();
+        ImageView imgProfile=findViewById(R.id.home_profile);
         getListProduct();
         getListFromDatabase();
-        ImageView imgProfile=findViewById(R.id.home_profile);
         imgProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,12 +53,44 @@ RecyclerView rvcHomeProduct;
 
 
     }
+private void initUi()
+{
+    rvcHomeProduct=findViewById(R.id.rvcHomeProduct);
+    imgSearch=findViewById(R.id.home_search);
+    imgCarts=findViewById(R.id.home_carts);
 
+    if (listcart != null)
+    {
+
+    }
+    else {
+        listcart= new ArrayList<>();
+    }
+
+}
+private void initListenrt()
+{
+    imgSearch.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(Home.this,Search_result.class);
+            startActivity(intent);
+        }
+    });
+    imgCarts.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(Home.this,Your_Orders.class);
+            startActivity(intent);
+        }
+    });
+
+}
 
     public void getListProduct()
     {
         LinearLayoutManager linearLayoutManager;
-        linearLayoutManager=new LinearLayoutManager(Home.this,LinearLayoutManager.HORIZONTAL,false);
+        linearLayoutManager=new LinearLayoutManager(Home.this,LinearLayoutManager.VERTICAL,false);
         rvcHomeProduct.setLayoutManager(linearLayoutManager);
         products=new ArrayList<>();
         productAdapter=new ProductAdapter(this,products);

@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
@@ -38,6 +39,7 @@ public class Search_result extends AppCompatActivity {
     private ProductAdapter productAdapter;
     RecyclerView rvcHomeProduct;
     EditText edt_search;
+    TextView tv_back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,14 +57,23 @@ public class Search_result extends AppCompatActivity {
         rvcHomeProduct=findViewById(R.id.rvcHomeProduct_search);
         edt_search= findViewById(R.id.searchResult_edt_search);
         Search_back=findViewById(R.id.Search_back);
+        tv_back=findViewById(R.id.search_back);
     }
     private void initListener()
     {
+        tv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (Search_result.this,Home.class);
+                startActivity(intent);
+            }
+        });
         img_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
          //       Toast.makeText(Search_result.this,"kích oke",Toast.LENGTH_SHORT).show();
                 getListFromDatabase();
+
             }
         });
         Search_back.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +87,7 @@ public class Search_result extends AppCompatActivity {
     public void getListProduct()
     {
         LinearLayoutManager linearLayoutManager;
-        linearLayoutManager=new LinearLayoutManager(Search_result.this,LinearLayoutManager.HORIZONTAL,false);
+        linearLayoutManager=new LinearLayoutManager(Search_result.this,LinearLayoutManager.VERTICAL,false);
         rvcHomeProduct.setLayoutManager(linearLayoutManager);
         listProducts=new ArrayList<>();
         productAdapter=new ProductAdapter(this,listProducts);
@@ -84,8 +95,10 @@ public class Search_result extends AppCompatActivity {
     }
     public void getListFromDatabase()
     {
+
         String strsearch= edt_search.getText().toString().toLowerCase().trim();
         DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference("Product");
+
     //    Query query = databaseReference.limitToFirst(2);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -96,29 +109,23 @@ public class Search_result extends AppCompatActivity {
 
                         if(product != null)
                         {
-                            if(product.getName().toLowerCase().contains(strsearch))
+                            if(product.getName().toLowerCase().contains(strsearch) == true)
                             {
                                 listProducts.add(product);
 
+
                             }
+
                             else
                             {
+
                                 Toast toast =  Toast.makeText(Search_result.this,"No Result Found !!",Toast.LENGTH_LONG);
                                 toast.setGravity(Gravity.CENTER | Gravity.CENTER, 20, 30);
                                 toast.show();
 
                             }
                             productAdapter.notifyDataSetChanged();
-
-
-
-
                         }
-
-
-
-
-
 
                 }
             }
