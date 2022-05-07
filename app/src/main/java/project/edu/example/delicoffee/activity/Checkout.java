@@ -29,6 +29,7 @@ import project.edu.example.delicoffee.model.Users;
 public class Checkout extends AppCompatActivity {
             TextView tvaddress,tvSum2,textView7,tvSum,textView15_25k;
             ImageView back;
+            TextView txtNameOrder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,7 @@ public class Checkout extends AppCompatActivity {
         back=findViewById(R.id.checkout_back);
         textView7=findViewById(R.id.textView7);
         textView15_25k=findViewById(R.id.textView15);
+        txtNameOrder=findViewById(R.id.txtNameOrder);
 
     }
     private void initListener()
@@ -73,9 +75,10 @@ public class Checkout extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             String strSum = extras.getString("key_price");
-            tvSum.setText(strSum);
-          //  tvSum2.setText(Integer.parseInt(strSum) + Integer.parseInt(textView15_25k.getText().toString()));
-
+            String strName = extras.getString("key_name");
+            txtNameOrder.setText(strName);
+            tvSum.setText(String.valueOf(strSum));
+           tvSum2.setText(String.valueOf(Integer.parseInt(strSum) + Integer.parseInt(textView15_25k.getText().toString())));
         }
     }
     private void showAddress()

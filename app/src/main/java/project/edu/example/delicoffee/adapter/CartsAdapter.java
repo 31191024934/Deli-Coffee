@@ -27,6 +27,9 @@ public class CartsAdapter extends RecyclerView.Adapter<CartsAdapter.CartsViewHol
       this.context=context;
         this.products=products;
     }
+    public CartsAdapter(){
+
+    }
     @NonNull
     @Override
     public CartsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

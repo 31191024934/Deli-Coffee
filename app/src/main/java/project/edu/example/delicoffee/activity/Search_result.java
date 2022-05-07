@@ -113,15 +113,14 @@ public class Search_result extends AppCompatActivity {
                             {
                                 listProducts.add(product);
 
-
                             }
 
                             else
                             {
 
-                                Toast toast =  Toast.makeText(Search_result.this,"No Result Found !!",Toast.LENGTH_LONG);
-                                toast.setGravity(Gravity.CENTER | Gravity.CENTER, 20, 30);
-                                toast.show();
+//                                Toast toast =  Toast.makeText(Search_result.this,"No Result Found !!",Toast.LENGTH_LONG);
+//                                toast.setGravity(Gravity.CENTER | Gravity.CENTER, 20, 30);
+//                                toast.show();
 
                             }
                             productAdapter.notifyDataSetChanged();
