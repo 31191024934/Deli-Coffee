@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextClock;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -30,6 +32,7 @@ public class Checkout extends AppCompatActivity {
             TextView tvaddress,tvSum2,textView7,tvSum,textView15_25k;
             ImageView back;
             TextView txtNameOrder;
+            Button btn_pay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,7 @@ public class Checkout extends AppCompatActivity {
         textView7=findViewById(R.id.textView7);
         textView15_25k=findViewById(R.id.textView15);
         txtNameOrder=findViewById(R.id.txtNameOrder);
+        btn_pay=findViewById(R.id.button3);
 
     }
     private void initListener()
@@ -60,6 +64,17 @@ public class Checkout extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Checkout.this,Home.class);
                 startActivity(intent);
+            }
+        });
+        btn_pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                                                Toast toast =  Toast.makeText(Checkout.this,
+                                                        "Payment Success",Toast.LENGTH_LONG);
+                                toast.setGravity(Gravity.CENTER | Gravity.CENTER, 20, 30);
+                                toast.show();
+                                Intent intent = new Intent(Checkout.this,Home.class);
+                                startActivity(intent);
             }
         });
     }

@@ -195,6 +195,7 @@ public class Profile_S extends AppCompatActivity {
                 updateUser.setUsername(strname);
                 updateUser.setSdt(strphone);
                 updateUser.setAddress(straddress);
+                Toast.makeText(Profile_S.this,"update successful",Toast.LENGTH_SHORT).show();
                 databaseReference.setValue(updateUser);
 
             }
